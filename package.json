@@ -1,0 +1,15 @@
+{
+  "name": "nomii_rewards_warehouse",
+  "version": "1.0.0",
+  "description": "The lambda functions for updating Nomii DB Warehouse",
+  "scripts": {
+    "deploy": "cd serverless && serverless --stage staging deploy",
+    "deploy-production": "cd serverless && serverless --stage=dev deploy",
+    "log": "cd serverless && sls logs -f graphql --tail"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "aws-sdk": "^2.22.0"
+  }
+}
