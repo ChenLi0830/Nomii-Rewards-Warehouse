@@ -23,8 +23,16 @@ service: Nomii-Rewards-Warehouse
 
 custom:
   defaultStage: staging
+
   stagingStreamUsers: arn:aws:dynamodb:us-west-2:504961736261:table/Nomii-Rewards-Users/stream/2017-04-04T21:13:05.675
+  stagingStreamStampEvents: arn:aws:dynamodb:us-west-2:504961736261:table/Nomii-Rewards-Stamp-Events/stream/2017-04-05T21:26:56.740
+  stagingStreamRestaurants: arn:aws:dynamodb:us-west-2:504961736261:table/Nomii-Rewards-Restaurants/stream/2017-04-05T21:27:37.426
+  stagingStreamCoupons: arn:aws:dynamodb:us-west-2:504961736261:table/Nomii-Rewards-Coupons/stream/2017-04-05T21:28:04.464
+
   userStreamARN: ${self:custom.${opt:stage, self:custom.defaultStage}StreamUsers}
+  stampEventStreamARN: ${self:custom.${opt:stage, self:custom.defaultStage}StreamStampEvents}
+  restaurantStreamARN: ${self:custom.${opt:stage, self:custom.defaultStage}StreamRestaurants}
+  couponStreamARN: ${self:custom.${opt:stage, self:custom.defaultStage}StreamCoupons}
 
 provider:
   name: aws
@@ -61,12 +69,19 @@ functions:
   user:
     handler: handlers.user
     events:
-    - http:
-        path: userUpdates # follow users
-        method: post
-        cors: true
-#    - stream: arn:aws:dynamodb:us-west-2:504961736261:table/Nomii-Rewards-Users/stream/2017-04-04T21:13:05.675
-    - stream: ${self:custom.userStreamARN}
+      - stream: ${self:custom.userStreamARN}
+  stampEvent:
+    handler: handlers.stampEvent
+    events:
+      - stream: ${self:custom.stampEventStreamARN}
+  restaurant:
+    handler: handlers.restaurant
+    events:
+      - stream: ${self:custom.restaurantStreamARN}
+  coupon:
+    handler: handlers.coupon
+    events:
+      - stream: ${self:custom.couponStreamARN}
 
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
