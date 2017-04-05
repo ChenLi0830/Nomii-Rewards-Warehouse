@@ -7,8 +7,7 @@
     "deploy-production": "cd serverless && serverless --stage=dev deploy",
     "log": "cd serverless && sls logs -f graphql --tail"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "aws-sdk": "^2.22.0"
   }

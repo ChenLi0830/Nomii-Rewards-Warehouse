@@ -17,23 +17,21 @@ service: Nomii-Rewards-Warehouse
 # Check out our docs for more details
 # frameworkVersion: "=X.X.X"
 
+# you can define service wide environment variables here
+#environment:
+#  stagingStreamUsers: arn:aws:dynamodb:us-west-2:504961736261:table/Nomii-Rewards-Users/stream/2017-04-04T21:13:05.675
+
 custom:
   defaultStage: staging
-#  userStreamARN: ${env:${opt:stage, self:custom.defaultStage}StreamUsers}
-  userStreamARN: ${env:stagingStreamUsers}
-
+  stagingStreamUsers: arn:aws:dynamodb:us-west-2:504961736261:table/Nomii-Rewards-Users/stream/2017-04-04T21:13:05.675
+  userStreamARN: ${self:custom.${opt:stage, self:custom.defaultStage}StreamUsers}
 
 provider:
   name: aws
-  runtime: nodejs4.3
+  runtime: nodejs6.10
   stage: ${opt:stage, self:custom.defaultStage}
   profile: ${self:provider.stage}Profile
   region: us-west-2
-
-# you can overwrite defaults here
-#  stage: dev
-#  region: us-east-1
-
   iamRoleStatements:
     - Effect: Allow
       Action:
@@ -49,10 +47,6 @@ provider:
         - dynamodb:GetRecords
         - dynamodb:GetShardIterator
       Resource: "arn:aws:dynamodb:us-west-2:*:*"
-
-# you can define service wide environment variables here
-environment:
-  stagingStreamUsers: arn:aws:dynamodb:us-west-2:504961736261:table/Nomii-Rewards-Users/stream/2017-04-04T21:13:05.675
 
 # you can add packaging information here
 #package:
