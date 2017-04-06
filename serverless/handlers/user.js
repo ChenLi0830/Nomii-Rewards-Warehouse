@@ -9,8 +9,8 @@ const main = (event, context, callback) => {
   console.log("event.Records[0].dynamodb", event.Records[0].dynamodb);
   
   const {OldImage, NewImage} = event.Records[0].dynamodb;
-  console.log("OldImage", OldImage);
-  console.log("NewImage", NewImage);
+  console.log("OldImage", JSON.stringify(OldImage));
+  console.log("NewImage", JSON.stringify(NewImage));
   
   const client = new pg.Client(config);
   

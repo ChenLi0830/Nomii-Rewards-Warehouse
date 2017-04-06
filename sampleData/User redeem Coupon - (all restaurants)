@@ -1,0 +1,218 @@
+{
+    "visitedRestaurants": {
+        "L": []
+    },
+    "redeemedCoupons": {
+        "L": []
+    },
+    "cards": {
+        "L": []
+    },
+    "lastLoginAt": {
+        "N": "1491454788"
+    },
+    "usedCards": {
+        "L": []
+    },
+    "ownedRestaurants": {
+        "L": []
+    },
+    "registeredAt": {
+        "N": "1491454788"
+    },
+    "id": {
+        "S": "1088303924608072"
+    },
+    "fbName": {
+        "S": "Chen  Li"
+    },
+    "token": {
+        "S": "EAAbeFCC9UCcBAA39lh44jou2SSMeaV7aQyNEyhRqrYjfSslykoRU09HfTIf1aOOm35BSi9SodTzyZCxYzOUkGb18VQAUl57UfSBO8UanavCNaVbyUZBJkyVftoyrjKNnZAoMcaCfm81psTXIVZCPPLlz11AZAsWf6ARTs6OAc2QzbkECNbQiGgFXOa9UZCB0R8eYWaCjge3wlzWlmB1E27UvqPV9vfBzqF4chVrleOmQZDZD"
+    }
+},
+
+
+{
+    "visitedRestaurants": {
+        "L": []
+    },
+    "redeemedCoupons": {
+        "L": [
+            {
+                "M": {
+                    "redeemedAt": {
+                        "N": "1491454829"
+                    },
+                    "couponCode": {
+                        "S": "7544"
+                    }
+                }
+            }
+        ]
+    },
+    "cards": {
+        "L": [
+            {
+                "M": {
+                    "stampCount": {
+                        "N": "1"
+                    },
+                    "id": {
+                        "S": "6b8926eb-8e81-4c70-b75e-7f135e49cd4e"
+                    }
+                }
+            },
+            {
+                "M": {
+                    "stampCount": {
+                        "N": "1"
+                    },
+                    "id": {
+                        "S": "c56f498e-a4b2-4eea-8694-b9038bf860fc"
+                    }
+                }
+            },
+            {
+                "M": {
+                    "stampCount": {
+                        "N": "1"
+                    },
+                    "id": {
+                        "S": "61743236-8f07-408a-a53f-9baa5ee6eef0"
+                    }
+                }
+            },
+            {
+                "M": {
+                    "stampCount": {
+                        "N": "1"
+                    },
+                    "id": {
+                        "S": "a514fed9-d71b-4076-b743-ba1ff20a7f7c"
+                    }
+                }
+            },
+            {
+                "M": {
+                    "stampCount": {
+                        "N": "1"
+                    },
+                    "id": {
+                        "S": "b970f6ac-1336-4508-b8ba-64b3981e0e0d"
+                    }
+                }
+            },
+            {
+                "M": {
+                    "stampCount": {
+                        "N": "1"
+                    },
+                    "id": {
+                        "S": "065a4293-daf5-4bfe-962c-927ba98fe319"
+                    }
+                }
+            },
+            {
+                "M": {
+                    "stampCount": {
+                        "N": "1"
+                    },
+                    "id": {
+                        "S": "ea596b9d-da36-4737-aef5-0296f9297bc8"
+                    }
+                }
+            },
+            {
+                "M": {
+                    "stampCount": {
+                        "N": "1"
+                    },
+                    "id": {
+                        "S": "55ffdec9-2c44-4985-ac4f-6371a5c2f517"
+                    }
+                }
+            },
+            {
+                "M": {
+                    "stampCount": {
+                        "N": "1"
+                    },
+                    "id": {
+                        "S": "f2e0d429-7eac-4190-bae2-b2f54610a5e0"
+                    }
+                }
+            },
+            {
+                "M": {
+                    "stampCount": {
+                        "N": "1"
+                    },
+                    "id": {
+                        "S": "3b0ca684-35e2-4e67-ac63-ddefeccbeec8"
+                    }
+                }
+            },
+            {
+                "M": {
+                    "stampCount": {
+                        "N": "1"
+                    },
+                    "id": {
+                        "S": "bb93c76b-a55f-4594-8ca5-15a399fb1d5e"
+                    }
+                }
+            },
+            {
+                "M": {
+                    "stampCount": {
+                        "N": "1"
+                    },
+                    "id": {
+                        "S": "92b16601-9fe0-47cc-9fb7-03293bae23b0"
+                    }
+                }
+            },
+            {
+                "M": {
+                    "stampCount": {
+                        "N": "1"
+                    },
+                    "id": {
+                        "S": "dc499724-79d1-43ad-afac-5c006910af57"
+                    }
+                }
+            },
+            {
+                "M": {
+                    "stampCount": {
+                        "N": "1"
+                    },
+                    "id": {
+                        "S": "865654f0-b972-43ec-821a-f30dbb801faa"
+                    }
+                }
+            }
+        ]
+    },
+    "lastLoginAt": {
+        "N": "1491454788"
+    },
+    "usedCards": {
+        "L": []
+    },
+    "ownedRestaurants": {
+        "L": []
+    },
+    "registeredAt": {
+        "N": "1491454788"
+    },
+    "id": {
+        "S": "1088303924608072"
+    },
+    "fbName": {
+        "S": "Chen  Li"
+    },
+    "token": {
+        "S": "EAAbeFCC9UCcBAA39lh44jou2SSMeaV7aQyNEyhRqrYjfSslykoRU09HfTIf1aOOm35BSi9SodTzyZCxYzOUkGb18VQAUl57UfSBO8UanavCNaVbyUZBJkyVftoyrjKNnZAoMcaCfm81psTXIVZCPPLlz11AZAsWf6ARTs6OAc2QzbkECNbQiGgFXOa9UZCB0R8eYWaCjge3wlzWlmB1E27UvqPV9vfBzqF4chVrleOmQZDZD"
+    }
+}
