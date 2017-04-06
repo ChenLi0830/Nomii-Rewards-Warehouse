@@ -1,4 +1,6 @@
 'use strict';
+const pg = require('pg');
+const config = require('../config').staging;
 
 const main = (event, context, callback) => {
   console.log("event", event);
@@ -9,20 +11,36 @@ const main = (event, context, callback) => {
   const {OldImage, NewImage} = event.Records[0].dynamodb;
   console.log("OldImage", OldImage);
   console.log("NewImage", NewImage);
-  // event.Records[0].dynamodb.NewImage
   
-  const response = {
-    statusCode: 200,
-    body: JSON.stringify({
-      message: 'User updates',
-      input: event,
-    }),
-  };
+  const client = new pg.Client(config);
   
-  callback(null, response);
+  client.connect(function (err) {
+    if (err) {
+      console.log("err connecting client", err);
+      throw err;
+    }
+    
+    console.log("client is connected");
+    
+    // disconnect the client
+    
+    client.end(function (err) {
+      console.log("client is disconnected");
+      if (err) throw err;
   
-  // Use this code if you don't use the http event with the LAMBDA-PROXY integration
-  // callback(null, { message: 'Go Serverless v1.0! Your function executed successfully!', event });
+      const response = {
+        statusCode: 200,
+        body: JSON.stringify({
+          message: 'User updates',
+          input: event,
+        }),
+      };
+  
+      callback(null, response);
+    });
+    
+    // });
+  });
 };
 
 module.exports = main;
